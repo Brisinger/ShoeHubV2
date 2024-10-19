@@ -10,7 +10,7 @@ To access the metrics, run the application using the executable file provided un
 The application includes a built-in web server, so once the application is run, you will see the address where you can see the metrics under __/metrics__ endpoint.
 
 
-[![Example of where to find the host address and port](https://github.com/aussiearef/ShoeHubV2/blob/main/host-example.png?raw=true)](https://github.com/aussiearef/ShoeHubV2/blob/main/host-example.png?raw=true)
+[![Example of where to find the host address and port](https://github.com/Brisinger/ShoeHubV2/blob/main/host-example.png?raw=true)](https://github.com/Brisinger/ShoeHubV2/blob/main/host-example.png?raw=true)
 
 In the above example, you must scrape HTTP://locahost:5000/metrics to see the metrics.
 
@@ -41,7 +41,7 @@ The metric endpoint listens on port __8080__by default. If you want to assign a 
 Example:
 
 ```
-  docker run -p 8020:80 -i aussiearef/shoehub
+  docker run -p 8020:8080 --name shoehub --hostname shoehub -d aussiearef/shoehub
 ```
 
 Please update your scraping rule in Prometheus so it scrapes the correct port.
@@ -64,18 +64,3 @@ docker compose -f dockrecompose.yml up -d
 
 This way, you will connect three containers via a single Docker network. You must log in to Grafana and manually add Prometheus and Loki as data sources.
 It is needless to say, you must have Docker Desktop installed on your computer before you can launch Grafana and Prometheus using Docker.
-
-
-## More Free Courses on YouTube
-
-[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=flat&logo=youtube)](http://www.youtube.com/@FreeTechnologyLectures)
-
-Subscribe to the Free Technology and Technology Management Courses channel for free lectures about Coding, DevOps, and Technology Management. [Here is the link to the YouTube channel](http://www.youtube.com/@FreeTechnologyLectures).
-
-## Buy me a coffee ☕
-
-If you find my work helpful, consider treating me by buying me a coffee!
-
-<a href="https://ko-fi.com/arefkarimi"><img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" alt="ko-fi" height="36"></a>
-
-
